@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: course-microservice
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/api/v1/course/**
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+
+

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: course-microservice
+server:
+  port: 8081
+  eureka:
+    instance:
+      hostname: localhost
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/fulandt?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&sslMode=DISABLED
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: fulandt
+
+
+
